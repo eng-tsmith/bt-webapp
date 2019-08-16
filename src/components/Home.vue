@@ -1,63 +1,44 @@
 <template>
+  <div>
+    <!-- jumbotron -->
     <div>
-      <!-- Navbar -->
-      <div>
-        <b-navbar type="dark" variant="dark">
-          <b-navbar-nav>
-            <b-nav-item href="#">HOME</b-nav-item>
-            <b-nav-item href="#">BAND</b-nav-item>
+      <b-jumbotron header="BRASS TACKS" lead="LIVE BAND">
+          <p>Ihre Hochzeitsband</p>
+      </b-jumbotron>
+    </div>
+    <!-- jumbotron -->
 
-            <!-- Navbar dropdowns -->
-            <b-nav-item-dropdown text="PROGRAMM" right>
-              <b-dropdown-item href="#">SEKTEMPFANG</b-dropdown-item>
-              <b-dropdown-item href="#">DINNERMUSIK</b-dropdown-item>
-              <b-dropdown-item href="#">TANZ & PARTY</b-dropdown-item>
-              <b-dropdown-item href="#">AFTER PARTY DJ</b-dropdown-item>
-            </b-nav-item-dropdown>
-
-            <b-nav-item href="#">GALLERIE</b-nav-item>
-            <b-nav-item href="#">KONTAKT</b-nav-item>
-          </b-navbar-nav>
-        </b-navbar>
-      </div><!-- Navbar -->
-
-      <!-- jumbotron -->
-      <div>
-        <b-jumbotron header="BRASS TACKS" lead="LIVE BAND">
-            <p>IHRE HOCHZEITSBAND</p>
-        </b-jumbotron>
-      </div><!-- jumbotron -->
-
+    <!-- cards -->
     <b-container>
-      <!-- Row of columns -->
-      <b-row>
-        <!-- Cont1 -->
-        <b-col>
-          <h2>SEKTEMPFANG</h2>
-          <p>Arsch. </p>
-          <b-btn>View Details &raquo;</b-btn>
-        </b-col>
-        <!-- Cont2 -->
-        <b-col>
-          <h2>DINNERMUSIK</h2>
-          <p>Arsch. </p>
-          <b-btn>View Details &raquo;</b-btn>
-        </b-col>
-        <!-- Cont3 -->
-        <b-col>
-          <h2>TANZ & PARTY</h2>
-            <p>Arsch. </p>
-            <b-btn>View Details &raquo;</b-btn>
-        </b-col>
-        <!-- Cont4 -->
-        <b-col>
-          <h2>AFTER PARTY DJ</h2>
-          <p>Arsch. </p>
-          <b-btn>View Details &raquo;</b-btn>
-        </b-col>
-      </b-row>
+      <div class="mt-3">
+        <b-card-group deck>
+          <b-card bg-variant="dark" header="SEKTEMPFANG" text-variant="white" class="text-center">
+            <b-img src="./../assets/icons8-champagner-64.png" fluid alt="Responsive image"></b-img>
+            <b-card-text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, o </b-card-text>
+            <b-btn><router-link v-bind:to="'/sektempfang'">Mehr &raquo;</router-link></b-btn>
+          </b-card>
+
+          <b-card bg-variant="dark" header="DINNERMUSIK" text-variant="white" class="text-center">
+            <b-img src="./../assets/icons8-essen-64.png" fluid alt="Responsive image"></b-img>
+            <b-card-text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, o </b-card-text>
+            <b-btn><router-link v-bind:to="'/dinnermusik'">Mehr &raquo;</router-link></b-btn>
+          </b-card>
+
+          <b-card bg-variant="dark" header="TANZ & PARTY" text-variant="white" class="text-center">
+            <b-img src="./../assets/icons8-partyballons-64.png" fluid alt="Responsive image"></b-img>
+            <b-card-text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, o </b-card-text>
+            <b-btn><router-link v-bind:to="'/tanzpartymusik'">Mehr &raquo;</router-link></b-btn>
+          </b-card>
+
+          <b-card bg-variant="dark" header="AFTER PARTY DJ" text-variant="white" class="text-center">
+            <b-img src="./../assets/icons8-dj-64.png" fluid alt="Responsive image"></b-img>
+            <b-card-text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, o </b-card-text>
+            <b-btn><router-link v-bind:to="'/dj'">Mehr &raquo;</router-link></b-btn>
+          </b-card>
+        </b-card-group>
+      </div>
     </b-container>
-    
+    <!-- cards -->
   </div>
 </template>
 
@@ -73,5 +54,4 @@ export default {
 </script>
 
 <style>
-    
 </style>

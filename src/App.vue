@@ -1,16 +1,20 @@
 <template>
   <div id="app">
-    <HomeView/>
+    <NavbarView/>
+    <router-view></router-view>
+    <FooterView/>
   </div>
 </template>
 
 <script>
-import HomeView from './components/Home'
+import NavbarView from './components/Navbar'
+import FooterView from './components/Footer'
 
 export default {
   name: 'App',
   components: {
-    HomeView
+    NavbarView,
+    FooterView
   }
 }
 </script>
@@ -22,6 +26,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

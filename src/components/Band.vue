@@ -1,8 +1,14 @@
 <template>
   <div>
-        <h1>Die Band</h1>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-
+    <h1>Die Band</h1>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+    <b-container>
+      <div class="mt-3">
+        <b-card-group deck>
+        <member-input v-for="member in members"  v-bind:key="member.id" :member=member></member-input>
+        </b-card-group>
+      </div>
+    </b-container> -->
   <!-- cards -->
     <!-- <b-container>
       <div class="mt-3">
@@ -67,12 +73,73 @@
 </template>
 
 <script>
+import Member from './Member.vue'
+
 export default {
   name: 'BandView',
   data () {
     return {
+      members: [
+        {
+          id: 1,
+          name: 'Timmy',
+          role: 'Bandleader // Keys // Vocals',
+          img: './../../static/musiker/timmy.png'
+        },
+        {
+          id: 2,
+          name: 'David',
+          role: 'Frontman // Vocals',
+          img: './../../static/musiker/david.png'
+        },
+        {
+          id: 3,
+          name: 'Francis',
+          role: 'Drums // Vocals',
+          img: './../../static/musiker/francis.png'
+        },
+        {
+          id: 4,
+          name: 'Daniel',
+          role: 'Trombone',
+          img: './../../static/musiker/daniel.png'
+        },
+        {
+          id: 5,
+          name: 'Joscha',
+          role: 'Bass',
+          img: './../../static/musiker/joscha.png'
+        },
+        {
+          id: 6,
+          name: 'Dave',
+          role: 'Guitar',
+          img: './../../static/musiker/dave.png'
+        },
+        {
+          id: 7,
+          name: 'Michi',
+          role: 'Sax',
+          img: './../../static/musiker/michi.png'
+        },
+        {
+          id: 8,
+          name: 'Stephan',
+          role: 'Trumpet',
+          img: './../../static/musiker/stephan.png'
+        },
+        {
+          id: 9,
+          name: 'Sepp',
+          role: 'Tech // DJ',
+          img: './../../static/musiker/sepp.png'
+        }
+      ],
       msg: 'Welcome to the Brass Tacks Live Band Web App'
     }
+  },
+  components: {
+    'member-input': Member
   }
 }
 </script>

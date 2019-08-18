@@ -27,4 +27,22 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+body {
+  background-image: linear-gradient(rgb(50, 50, 50), rgb(0, 0, 0));
+  color: white;
+}
+p {
+  color: white;
+}
+h1 {
+  color: white;
+}
+a {
+  color: white;
+}
+
+theme-colors: {
+  "primary": #0074d9,
+  "danger": #ff4136;
+}
 </style>
